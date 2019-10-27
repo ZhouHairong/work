@@ -7,6 +7,7 @@ int max(int * a,int n)
 			m=a[i];
 	return m;
 }
+
 int sum(int * a,int n)
 {
 	int s,i;
