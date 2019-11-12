@@ -43,5 +43,6 @@ int main()
 	mem_overrun1();
 	mem_overrun2();
 	mem_double_free();
-	mem_free_wild_pointer();
+	mem_free_wild_pointer();s
+
 }
