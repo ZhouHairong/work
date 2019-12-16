@@ -1,0 +1,27 @@
+#include "my.h"
+#define NUM_THREADS 4
+struct info{
+	int no;
+	int n;
+};
+struct rval{
+	int sum;
+	pthread_t tid;
+};
+void hello(void * t)
+{
+	pthread_t my_tid;
+	struct info *y;
+	int s=0;
+	y=(struct info*)(t);
+	for(int i=0;i<=y->n;i++)
+	s+=i;
+	my_tid=pthread_self(); 
+	printf("\tThread %d: my tid is %lx,Hello world\n",(int)y->no+1,my_tid);
+	printf("\tThread %d: sum 1 to %d is %d\n",(int)y->no,y->n,s);
+}
+
+int main()
+{
+		
+}
